@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-      SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -46,6 +46,7 @@ class MyApp extends StatelessWidget {
                       fontFamily: 'Pacifico',
                       fontWeight: FontWeight.bold),
                 ),
+                // phone
                 Card(
                   color: Colors.white,
                   margin:
@@ -55,9 +56,15 @@ class MyApp extends StatelessWidget {
                       Icons.phone,
                       color: Color.fromARGB(255, 1, 23, 40),
                     ),
-                    title: Text(
-                      "+91 7497035925",
-                      style: TextStyle(),
+                    title: Center(
+                      child: new Text(
+                        "Phone No.",
+                        style: TextStyle(
+                            fontSize: 20.0,
+                            color: Color.fromARGB(255, 1, 23, 40),
+                            fontFamily: 'Pacifico',
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                     trailing: Icon(
                       Icons.copy,
@@ -70,6 +77,7 @@ class MyApp extends StatelessWidget {
                     },
                   ),
                 ),
+                //mail
                 Card(
                   color: Colors.white,
                   margin:
@@ -80,7 +88,16 @@ class MyApp extends StatelessWidget {
                       color: Color.fromARGB(255, 1, 23, 40),
                     ),
                     title: new InkWell(
-                        child: new Text('hbnsl78@gmail.com'),
+                        child: Center(
+                          child: new Text(
+                            "E-mail Id",
+                            style: TextStyle(
+                                fontSize: 20.0,
+                                color: Color.fromARGB(255, 1, 23, 40),
+                                fontFamily: 'Pacifico',
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
                         onTap: () => launch(
                             'https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox')),
                     trailing: Icon(
@@ -107,8 +124,16 @@ class MyApp extends StatelessWidget {
                           color: Color.fromARGB(255, 1, 23, 40)),
                     ),
                     title: new InkWell(
-                        child: new Text(
-                            'https://www.linkedin.com/in/himanshi-bansal-495196222'),
+                        child: Center(
+                          child: new Text(
+                            "Linkedin",
+                            style: TextStyle(
+                                fontSize: 20.0,
+                                color: Color.fromARGB(255, 1, 23, 40),
+                                fontFamily: 'Pacifico',
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
                         onTap: () => launch(
                             'https://www.linkedin.com/in/himanshi-bansal-495196222')),
                     trailing: Icon(
@@ -131,7 +156,16 @@ class MyApp extends StatelessWidget {
                     leading: Image.asset('images/GitHub.png',
                         width: 20, height: 20, fit: BoxFit.fill),
                     title: new InkWell(
-                        child: new Text('https://github.com/Himanshi7Bansal'),
+                        child: Center(
+                          child: new Text(
+                            "Github",
+                            style: TextStyle(
+                                fontSize: 20.0,
+                                color: Color.fromARGB(255, 1, 23, 40),
+                                fontFamily: 'Pacifico',
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
                         onTap: () =>
                             launch('https://github.com/Himanshi7Bansal')),
                     trailing: Icon(
@@ -153,8 +187,16 @@ class MyApp extends StatelessWidget {
                     leading: Image.asset('images/hackerrank.png',
                         width: 30, height: 30, fit: BoxFit.fill),
                     title: new InkWell(
-                        child: new Text(
-                            'https://www.hackerrank.com/hbnsl78?hr_r=1'),
+                        child: Center(
+                          child: new Text(
+                            "Hackerrank",
+                            style: TextStyle(
+                                fontSize: 20.0,
+                                color: Color.fromARGB(255, 1, 23, 40),
+                                fontFamily: 'Pacifico',
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
                         onTap: () => launch(
                             'https://www.hackerrank.com/hbnsl78?hr_r=1')),
                     trailing: Icon(
@@ -164,6 +206,38 @@ class MyApp extends StatelessWidget {
                     onTap: () async {
                       await Clipboard.setData(ClipboardData(
                           text: "https://www.hackerrank.com/hbnsl78?hr_r=1"));
+                      // copied successfully
+                    },
+                  ),
+                ),
+                Card(
+                  color: Colors.white,
+                  margin:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                  child: ListTile(
+                    leading: Image.asset('images/resume.jpg',
+                        width: 30, height: 30, fit: BoxFit.fill),
+                    title: new InkWell(
+                        child: Center(
+                          child: new Text(
+                            "Resume",
+                            style: TextStyle(
+                                fontSize: 20.0,
+                                color: Color.fromARGB(255, 1, 23, 40),
+                                fontFamily: 'Pacifico',
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        onTap: () => launch(
+                            'https://drive.google.com/file/d/1_JPBiYd89Sdp0Cy5a81tcsnFxpjsu23i/view?usp=drive_link')),
+                    trailing: Icon(
+                      Icons.copy,
+                      color: Color.fromARGB(255, 1, 23, 40),
+                    ),
+                    onTap: () async {
+                      await Clipboard.setData(ClipboardData(
+                          text:
+                              "https://drive.google.com/file/d/1_JPBiYd89Sdp0Cy5a81tcsnFxpjsu23i/view?usp=drive_link"));
                       // copied successfully
                     },
                   ),
